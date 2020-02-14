@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from "axios";
 import './App.css';
-import PlayerCard from "./components/PlayerCard.js";
+import { PlayerCard } from "./components/PlayerCard.js";
+import { Nav } from "./components/Nav.js";
 
 // C C R
 
@@ -37,10 +38,13 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        <h1>Happy building <span role="img" aria-label="Smiling emoji">😃</span></h1>
-        {this.state.players.map(player => (
-          <PlayerCard key={player.id} player={player}/>
-        ))}
+        {/* <h1>Happy building <span role="img" aria-label="Smiling emoji">😃</span></h1> */}
+        <Nav />
+        <div className="container">
+          {this.state.players.map(player => (
+            <PlayerCard key={player.id} player={player}/>
+          ))}
+        </div>
       </div>
     );
   }

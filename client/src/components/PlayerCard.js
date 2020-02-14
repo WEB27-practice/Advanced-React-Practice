@@ -2,7 +2,7 @@
 import React from "react";
 
 // 2  
-const PlayerCard = (props) => {
+export const PlayerCard = (props) => {
     console.log(props);
 
     // 2.1
@@ -16,4 +16,4 @@ const PlayerCard = (props) => {
     )
 };
 // 3
-export default PlayerCard;
+// export default PlayerCard;
